@@ -2,7 +2,6 @@
   max-width: 650px;
   background-color: white;
   border: 1px solid lightgray;
-  margin-left: 200px;
   margin-bottom: 45px;
   margin-top: 20px;
 }
@@ -21,4 +20,19 @@
 }
 .postAvatar {
   margin-right: 10px;
+}
+.commentbox {
+  display: flex;
+  margin-top: 10px;
+}
+.postinput {
+  flex: 1;
+  padding: 10px;
+}
+.postbutton {
+  flex: 0;
+  border: none;
+  border-top: 1px solid lightgrey;
+  color: aquamarine;
+  background-color: transparent;
 }

@@ -11,6 +11,9 @@
   box-shadow: 0.5px 0.1px rgb(196, 195, 195);
   background-color: white;
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .navbar_logo {
   object-fit: contain;
@@ -45,4 +48,7 @@
 .signIN {
   display: flex;
   flex-direction: column;
+}
+.Allpost {
+  padding: 20px;
 }

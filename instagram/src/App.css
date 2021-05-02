@@ -1,38 +1,48 @@
+* {
+  margin: 0px;
+}
 .App {
-  text-align: center;
+  background-color: rgb(250, 250, 250);
+}
+.navbar {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid rgb(209, 207, 207);
+  box-shadow: 0.5px 0.1px rgb(196, 195, 195);
+  background-color: white;
+  display: flex;
+}
+.navbar_logo {
+  object-fit: contain;
+  height: 30px;
+  margin-left: 190px;
+  margin-right: 250px;
+}
+.navbarSearch {
+  background-color: rgb(241, 240, 240);
+  width: 250px;
+  padding-left: 90px;
+  box-sizing: border-box;
+  border-color: rgb(221, 219, 219);
+  align-items: center;
+  margin-right: 260px;
+
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: 58px 0;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-128.png);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbarSearch:focus {
+  padding-left: 30px;
+  background-position: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.signUp {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.signIN {
+  display: flex;
+  flex-direction: column;
 }

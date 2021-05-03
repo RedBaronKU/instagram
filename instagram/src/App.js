@@ -2,11 +2,13 @@ import './App.css';
 import Post from './Post.js'
 import React, {useState,useEffect} from 'react'
 import {db} from './firebase.js'
-import { Button,Input } from '@material-ui/core'
+import { Input } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import {auth} from './firebase.js'
 import ImageUpload from './ImageUpload'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Navbar,Button,Nav} from 'react-bootstrap'
 // import InstagramEmbed from 'react-instagram-embed';
 
 function getModalStyle() {
@@ -147,23 +149,34 @@ function App() {
                     </form>
                 </center>
             </Modal>
+            <Navbar className="navi" bg="light" expand="lg">
+            <Navbar.Brand href="#" className="mr-auto">
             <img
                 src="https://i.pinimg.com/originals/57/6c/dd/576cdd470fdc0b88f4ca0207d2b471d5.png"
-                className="navbar_logo"
+                className="navbar_logo mr-auto"
                 alt="Instagram">    
             </img>
-            <input type="text" placeholder="Search" className="navbarSearch"></input>
-            {
-              user ? (
-                <Button onClick={()=>auth.signOut()}>Logout</Button>
-              ):
-              (
-              <div className="app__loginContainer">
-                <Button onClick={()=>setopensignIN(true)}>Sign In</Button>
-                <Button onClick={()=>setOpen(true)}>SignUp</Button>
-              </div>
-              )  
-            }
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+            <Navbar.Collapse id="basic-navbar-nav">
+              
+              <Nav className="ml-auto">
+              {
+                user ? (
+                  <div >
+                    <Button onClick={()=>auth.signOut()}>Logout</Button>
+                  </div>
+                ):
+                (
+                <div className="app__loginContainer container">
+                  <Button className="btn btn-danger"onClick={()=>setopensignIN(true)}>Sign In</Button>
+                  <Button onClick={()=>setOpen(true)}>SignUp</Button>
+                </div>
+                )  
+              }
+              </Nav>
+          </Navbar.Collapse>
+          </Navbar> 
         </div>
 
       { user?.displayName ? (
@@ -172,7 +185,7 @@ function App() {
           <h3>Sorry, you need to Login to upload, Head up to SignUp Now and start posting....</h3>
         )
       }
-      <div className="Allpost">      
+      <div className="Allpost col-xl-8 col-lg-8 offset-md-2">      
       {
         posts.map(({id,post}) => (
          <Post key={id} user={user} postID={id} username={post.username} caption={post.caption} imageURL={post.imageURL} avatarURL={post.avatarURL}/>

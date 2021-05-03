@@ -4,6 +4,7 @@ import Avatar from '@material-ui/core/Avatar';
 import {db} from './firebase'
 import firebase from 'firebase'
 
+
 function Post({user,postID,username,caption,imageURL,avatarURL}) {
     const[comments,setComments]=useState([]);
     const[comment,setComment]=useState('');
@@ -49,15 +50,15 @@ function Post({user,postID,username,caption,imageURL,avatarURL}) {
             className="postImage"
             alt="Noice"></img>
             <h4 className="postText"><strong>{username}</strong>  {caption}</h4>
-
+            <p className="viewcomments">View all comments</p>
             <div className="postcomments">
                 {comments.map((comment)=>(
                     <p>
-                        <b>{comment.username}</b>{comment.text}
+                        <strong>{comment.username}</strong>  {comment.text}
                     </p>
                 ))}
             </div>
-
+                    
             { user && 
                 (<form className="commentbox">
                 <input type="text" 
@@ -68,7 +69,7 @@ function Post({user,postID,username,caption,imageURL,avatarURL}) {
                 />
                 <button 
                 disabled={!comment}
-                className="postbutton"
+                className="postbutton btn btn-link"
                 type="Submit"
                 onClick={postComment}>Post</button>
                 </form>

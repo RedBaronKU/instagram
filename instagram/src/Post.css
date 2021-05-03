@@ -1,9 +1,9 @@
 .post {
-  max-width: 650px;
+  max-width: 800px;
   background-color: white;
   border: 1px solid lightgray;
   margin-bottom: 45px;
-  margin-top: 20px;
+  margin-top: 2px;
 }
 .postImage {
   object-fit: contain;
@@ -11,7 +11,8 @@
 }
 .postText {
   font-weight: normal;
-  padding: 20px;
+  padding: 15px;
+  font-size: 18px;
 }
 .postHeader {
   display: flex;
@@ -24,10 +25,17 @@
 .commentbox {
   display: flex;
   margin-top: 10px;
+  padding: 5px;
+  border-top: 1px solid lightgrey;
 }
 .postinput {
   flex: 1;
   padding: 10px;
+  border: none;
+}
+.postinput:focus {
+  border: none;
+  outline: none;
 }
 .postbutton {
   flex: 0;
@@ -35,4 +43,16 @@
   border-top: 1px solid lightgrey;
   color: aquamarine;
   background-color: transparent;
+}
+.postcomments {
+  padding-left: 10px;
+  font-size: 16px;
+}
+.viewcomments {
+  color: grey;
+  font-size: 13px;
+  padding-left: 15px;
+}
+.postcomments {
+  margin: 0;
 }

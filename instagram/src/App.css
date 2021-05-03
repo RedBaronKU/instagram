@@ -6,7 +6,7 @@
 }
 .navbar {
   width: 100%;
-  padding: 15px;
+
   border-bottom: 1px solid rgb(209, 207, 207);
   box-shadow: 0.5px 0.1px rgb(196, 195, 195);
   background-color: white;
@@ -18,23 +18,21 @@
 .navbar_logo {
   object-fit: contain;
   height: 30px;
-  margin-left: 190px;
-  margin-right: 250px;
+  margin-left: auto;
 }
-.navbarSearch {
-  background-color: rgb(241, 240, 240);
+/* .navbarSearch {
+  background-color: rgb(255, 251, 251);
   width: 250px;
   padding-left: 90px;
   box-sizing: border-box;
   border-color: rgb(221, 219, 219);
   align-items: center;
-  margin-right: 260px;
 
   background-size: 25px;
   background-repeat: no-repeat;
   background-position: 58px 0;
   background-image: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_search_48px-128.png);
-}
+} */
 
 .navbarSearch:focus {
   padding-left: 30px;
@@ -51,4 +49,7 @@
 }
 .Allpost {
   padding: 20px;
+}
+.navi {
+  padding: 15px;
 }
